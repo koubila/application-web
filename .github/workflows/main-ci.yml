@@ -1,0 +1,20 @@
+name: main ci
+on: 
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+      
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check echo
+        run: echo "job custom done !"
+  another-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check second
+        run: echo "done !"
